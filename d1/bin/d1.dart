@@ -4,7 +4,7 @@
 import 'dart:io';
 
 // hardcode full file path
-final input = File('/bin/data.txt').readAsLinesSync();
+final input = File('../bin/data.txt').readAsLinesSync();
 void main() {
   // dont forget .tostring otherwise its still an int!
   // print(functionName(what data is sent to function))
@@ -27,7 +27,7 @@ int d1p1(Iterable<String> input) {
       count++;
     }
 
-    // if previous = null or previous > next set previous to next
+    // set previous to next and continue
     previous = next;
   }
 
@@ -40,11 +40,11 @@ int d1p2(Iterable<String> input) {
   var count = 0;
   int? previous;
 
-  // (final means can only be set once) next is a list of ints from input into a list
+  // (final means can only be set once) next is set input(int.parse) put into a list that cant be changed
   final next = input.map(int.parse).toList(growable: false);
 
   // for each line in data.txt
-  // position 0 is first in list; position is nex.length -2; position +1
+  // position 0 is first in list; position is next.length -2; position +1
   for (var position = 0; position < next.length - 2; position++) {
     // (final means can only be set once) current set to next[position]0,1,& 2 in list
     final current = next[position] + next[position + 1] + next[position + 2];
@@ -54,7 +54,7 @@ int d1p2(Iterable<String> input) {
       count++;
     }
 
-    // if previous = null or previous > current set previous to current
+    // set previous to current and continue
     previous = current;
   }
 

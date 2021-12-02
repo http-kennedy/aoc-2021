@@ -1,3 +1,4 @@
+*/*.puzzle
 .dart_tool/*
 */*.lock
 */*.yaml
