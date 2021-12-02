@@ -1,0 +1,4 @@
+.dart_tool/*
+*/*.lock
+*/*.yaml
+*/.dart_tool/*
