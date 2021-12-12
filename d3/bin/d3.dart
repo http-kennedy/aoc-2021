@@ -2,15 +2,14 @@ import 'dart:io';
 import 'dart:core';
 
 // hardcode full file path
-final input = File('/Users/kennedy/Documents/projects/aoc2021/d3/bin/data.txt')
-    .readAsStringSync();
+final input = File('./bin/data.txt').readAsStringSync();
 
 void main() {
   print(d3p1(input));
   //print(d3p2(input).toString() + ' part 2');
 }
 
-String d3p1(List<String> input) {
+int d3p1(List<String> input) {
   final numberOfBitsInRow = input.first.length;
   final inputLengthDividedByTwo = input.length ~/ 2;
 

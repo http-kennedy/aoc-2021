@@ -1,7 +1,7 @@
 import 'dart:io';
 
 // hardcode full file path
-final input = File('../bin/data.txt').readAsLinesSync();
+final input = File('./bin/data.txt').readAsLinesSync();
 void main() {
   print(d1p1(input).toString() + ' part 1');
   print(d1p2(input).toString() + ' part 2');
