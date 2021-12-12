@@ -30,7 +30,7 @@ int d2p1(List<String> input) {
         exit;
     }
   }
-  return (horizontal.abs() * vertical.abs());
+  return (horizontal * vertical);
 }
 
 int d2p2(List<String> input) {
